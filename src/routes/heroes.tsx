@@ -1,3 +1,4 @@
+import { Title } from "@solidjs/meta";
 import { query, createAsync } from "@solidjs/router";
 import { Suspense } from "solid-js";
 import { HeroesScreen } from "~/screens/heroes";
@@ -11,8 +12,12 @@ export default function Heroes() {
   const heroes = createAsync(async () => await getHeroes());
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <HeroesScreen units={heroes()} />
-    </Suspense>
+    <>
+      <Title>Choose hero - Game</Title>
+
+      <Suspense fallback={<div>Loading...</div>}>
+        <HeroesScreen units={heroes()} />
+      </Suspense>
+    </>
   );
 }

@@ -6,6 +6,7 @@ import { io } from "socket.io-client";
 import { usePlayerContext } from "~/contexts/player.hook";
 import { AmbientSound } from "~/components/ambient-sound";
 import { Character } from "~/components/character.component";
+import { Title } from "@solidjs/meta";
 
 type Props = {
   onInit: any;
@@ -39,6 +40,8 @@ export const ConnectMatch = (props: Props) => {
     <Show
       when={!state.searching && !state.started && !state.finished && user.hero}
     >
+      <Title>Find a match - Game</Title>
+
       <AmbientSound sound="https://res.cloudinary.com/dyfphd7ir/video/upload/v1749213749/title_f7outf.ogg" />
 
       <div class="size-full relative flex flex-col items-center gap-y-8 p-8">

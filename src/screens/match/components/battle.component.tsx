@@ -7,7 +7,7 @@ import { StartSplash } from "./start-splash.component";
 import { Socket } from "socket.io-client";
 import { UnitProvider } from "../contexts/unit.provider";
 import { UnitDetail } from "./unit.component";
-import { AmbientSound } from "~/components/ambient-sound";
+import { Title } from "@solidjs/meta";
 
 type Props = {
   socket: Accessor<Socket | null>;
@@ -28,6 +28,8 @@ export const BattleMatch = (props: Props) => {
           props.socket()
         }
       >
+        <Title>Battle - Game</Title>
+
         <UnitProvider>
           <PlayersMatch />
           <MapMatch socket={props.socket} />

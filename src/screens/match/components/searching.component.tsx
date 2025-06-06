@@ -7,6 +7,7 @@ import { getPlayerUnitLeader } from "~/libs/unit.service";
 import { AmbientSound } from "~/components/ambient-sound";
 import { Character } from "~/components/character.component";
 import { usePlayerContext } from "~/contexts/player.hook";
+import { Title } from "@solidjs/meta";
 
 type Props = {
   socket: Accessor<Socket | null>;
@@ -60,6 +61,8 @@ export const SearchingMatch = (props: Props) => {
 
   return (
     <Show when={state.searching && !state.started && !state.finished}>
+      <Title>Searching a match - Game</Title>
+
       <AmbientSound sound="https://res.cloudinary.com/dyfphd7ir/video/upload/v1749213750/match_htcrj6.ogg" />
 
       <div class="size-full relative flex flex-col items-center gap-y-8 p-8">
