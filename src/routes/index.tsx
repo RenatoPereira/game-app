@@ -1,11 +1,11 @@
-import { TitleScreen } from "~/screens/title";
 import { Title } from "@solidjs/meta";
+import { TutorialScreen } from "~/screens/tutorial";
 
 export default function Home() {
   return (
     <>
-      <Title>Initial page - Game</Title>
-      <TitleScreen />
+      <Title>Game</Title>
+      <TutorialScreen />
     </>
   );
 }

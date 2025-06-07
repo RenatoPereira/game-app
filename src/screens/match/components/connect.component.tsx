@@ -33,7 +33,7 @@ export const ConnectMatch = (props: Props) => {
   };
 
   if (!user.hero) {
-    navigate("/", { replace: true });
+    navigate("/title", { replace: true });
   }
 
   return (
@@ -51,7 +51,7 @@ export const ConnectMatch = (props: Props) => {
 
         <div class="text-lg text-neutral-2 absolute left-8 top-8">
           <A
-            href="/"
+            href="/title"
             class="flex gap-2 items-center hover:-translate-x-2 transition ease-in-out duration-300"
           >
             <IoExitOutline size={24} class="rotate-180" /> Leave

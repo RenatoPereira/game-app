@@ -61,7 +61,7 @@ export const EndSplash = (props: Props) => {
 
           <A
             class="flex items-center justify-center absolute bottom-8 left-1/2 -translate-x-1/2 text-2xl text-indigo-100 rounded-full size-32 border border-neutral-200/50 cursor-pointer before:content-[''] before:block before:absolute before:inset-0 before:size-full before:scale-0 hover:before:scale-100 before:transition-transform before:duration-300 before:bg-neutral-200/25 before:easy-in-out before:rounded-full"
-            href="/"
+            href="/title"
           >
             Finish
           </A>
