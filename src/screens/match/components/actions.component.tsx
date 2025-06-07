@@ -1,4 +1,4 @@
-import { Accessor, Show } from "solid-js";
+import { Accessor, createEffect, Show } from "solid-js";
 import { useMatchContext } from "../contexts/match.hook";
 import { Socket } from "socket.io-client";
 // import { StoreMatch } from "./store.component";
@@ -19,10 +19,15 @@ export const ActionsMatch = (props: Props) => {
 
   const finishTurn = () => {
     props.socket()?.emit("finishTurn");
-    updateTurn({
-      moving: true,
-    });
   };
+
+  createEffect(() => {
+    if (battle.activeTurn) {
+      updateTurn({
+        moving: true,
+      });
+    }
+  });
 
   return (
     <Show when={battle.activeTurn}>

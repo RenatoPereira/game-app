@@ -18,7 +18,7 @@ export const ConnectMatch = (props: Props) => {
   const { state, search } = useMatchContext();
 
   const handleSearch = () => {
-    let socket = io("ws://localhost:3100/match", {
+    let socket = io(`${import.meta.env.VITE_WS_URL}/match`, {
       query: {
         name: user.name,
         leaderId: user.hero?.id,
