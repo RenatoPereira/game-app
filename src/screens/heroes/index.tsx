@@ -52,7 +52,7 @@ export const HeroesScreen = (props: Props) => {
 
       <Show when={state.hero}>
         <A
-          class="flex items-center justify-center absolute bottom-8 right-8 text-2xl text-indigo-100 rounded-full size-32 border border-neutral-200/50 cursor-pointer before:content-[''] before:block before:absolute before:inset-0 before:size-full before:scale-0 hover:before:scale-100 before:transition-transform before:duration-300 before:bg-neutral-200/25 before:easy-in-out before:rounded-full"
+          class="flex items-center justify-center absolute bottom-8 right-8 text-2xl text-indigo-100 font-(family-name:--font-orbitron) text-center rounded-full size-32 border border-neutral-200/50 cursor-pointer before:content-[''] before:block before:absolute before:inset-0 before:size-full before:scale-0 hover:before:scale-100 before:transition-transform before:duration-300 before:bg-neutral-200/25 before:easy-in-out before:rounded-full"
           href="/match"
         >
           Find match

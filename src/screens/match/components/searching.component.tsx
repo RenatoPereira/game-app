@@ -70,7 +70,7 @@ export const SearchingMatch = (props: Props) => {
           Searching an enemy
         </h1>
 
-        <div class="absolute top-1/2 left-1/2 -translate-1/2 flex flex-col items-center gap-y-8">
+        <div class="absolute top-48 left-1/2 -translate-x-1/2 flex flex-col items-center gap-y-8">
           <div class="w-72">
             <Character unit={user.hero!} />
           </div>
@@ -81,7 +81,7 @@ export const SearchingMatch = (props: Props) => {
         </p>
 
         <button
-          class="absolute bottom-8 left-8 text-2xl text-indigo-100 rounded-full size-32 border border-neutral-200/50 cursor-pointer before:content-[''] before:block before:absolute before:inset-0 before:size-full before:scale-0 hover:before:scale-100 before:transition-transform before:duration-300 before:bg-neutral-200/25 before:easy-in-out before:rounded-full"
+          class="absolute bottom-8 left-8 text-2xl text-indigo-100 font-(family-name:--font-orbitron) rounded-full size-32 border border-neutral-200/50 cursor-pointer before:content-[''] before:block before:absolute before:inset-0 before:size-full before:scale-0 hover:before:scale-100 before:transition-transform before:duration-300 before:bg-neutral-200/25 before:easy-in-out before:rounded-full"
           onClick={onCancel}
         >
           Cancel
